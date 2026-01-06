@@ -1,0 +1,8 @@
+services:
+  sandbox:
+    build: .
+    volumes:
+      - ./workspace:/app/workspace
+    working_dir: /app/workspace
+    stdin_open: true
+    tty: true

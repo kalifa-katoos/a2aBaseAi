@@ -1,0 +1,14 @@
+services:
+  db:
+    image: pgvector/pgvector:16-pg1.1
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: a2abase_memory
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
